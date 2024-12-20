@@ -5,15 +5,15 @@ from flask_bcrypt import Bcrypt
 import random
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key'
+app.config['SECRET_KEY'] = 'secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 
 # Email Configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'maheshsemwal02@gmail.com'  # Replace with your email
-app.config['MAIL_PASSWORD'] = 'qibiwvbnrpmrcgnc'          # Replace with your email app password
+app.config['MAIL_USERNAME'] = 'Email'  # Replace with your email
+app.config['MAIL_PASSWORD'] = 'password'          # Replace with your email app password
 
 mail = Mail(app)
 db = SQLAlchemy(app)
